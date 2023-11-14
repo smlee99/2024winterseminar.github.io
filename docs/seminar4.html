@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seminar 3</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html"><h3 id="abstract">Integration Algorithm (Seminar #1)</h3>
+<blockquote>
+<p>2024 Winter Seminar <strong>Molecular Simulation</strong><br>
+제2실험동 3층</p>
+</blockquote>
+<p>통계역학은 계가 어떤 상태에서 가질 수 있는 가능한 energy distribution에 대해 다루는 학문이다. Energy distribution은 Maxwell-Boltzmann distribution이라고 불리며, 각 입자들의 평균속도가 그들의 질량과 온도에 기반한다는 것을 의미한다.
+ 우리는 계의 에너지를 관측-측정하기 위해 실제로 통제할 수 있는 열역학적 변수들을 이용해 system을 정리할 수 있는데, 대표적인 예로 Canonical Ensemble, Isothermal-Isobaric ensemble이 있다. 두 ensemble 모두 정해진 온도에서 관측이 진행되고, MD에서는 온도를 고정하기 위해 thermostat 을 이용한다.</p>
+<ul></ul>
+<p>Thermostat을 이용한 temperature control algorithm은 Strong coupling methods, weak coupling methods, stochastic methods, extended system dynamics 로 구분할 수 있다.
+이번 발표에서 보다 심층적으로 다룰 주제는 Maxwell-Boltzmann distribution을 기반으로 각 atom들의 새운 속도를 무작위로 적용한 stochastic methods, 온도를 random한 요소가 아닌 “heat bath mass”라는 artificial 한 변수로 적용하여 보다 나은 kinetics와 dynamics를 설명할 수 있는 extended system thermostats, 각 atom간 interaction의 세기에 따라 구분할 수 있는 strong coupling methods, weak coupling methods를 수식과 함께 다뤄보고, 이 temperature control algorithm들이 가지고 있는 고유의 장단점과 문제점에 대해 다뤄볼 예정이다.
+또한, thermostat과 관련한 문제들로 velocity rescaling technique을 사용할 때 center-of-mass의 motion이 high-frequency motion을 전혀 고려하지 못하는 상황과 한가지의 thermostat 만 이용했을 때 solvent 와 solute 가 너무 느린 kinetic energy 교환으로 인한 너무 작은 temperature gradient으로 인한 올바른 dynamics 고려가 불가능한 상황, Berendsen weak coupling thermostat을 REMD simulation에서 쓸 때 Berendsen thermostat이 canonical ensemble을 해결하지 못하는 문제 또한 있었고 이들에 대해 다뤄볼 예정이다.</p>
+
+<h4 id="참고문헌">참고문헌</h4>
+<p>아래에는 일반적인 참고문헌을 기록하였으며, 세미나 중간중간에 나오는 작은 주제에 대한 참고문헌은 세미나 슬라이드 하단에 표기하였습니다.</p>
+<ul>
+<li> [1] -</li>
+<li> [2] -</li>
+<li> [3] -</li>
+<li> [4] -</li>
+<li> [5] -</li>
+</ul>
+</div>
+</body>
+
+</html>
