@@ -156,11 +156,11 @@ syntax-highlight: True
 ############
 
 events:
-    date: "Sangmin Lee"
+  - date: "Sangmin Lee"
     description: "Integration, Monte Carlo Advanced, Rare event Simulation, Reactive Simulation"
-    date: "Seonghyun Kang"
+  - date: "Seonghyun Kang"
     description: "Force and Energy computation, Monte Carlo Basic, Free energy Calculation I, Polarizable Simulation"
-    date: "Seungbin Hong"
+  - date: "Seungbin Hong"
     description: "Force field model, Constant ensemble SImulation, Free energy Calculation II, Coarse-Grained Simulation"
 
 
