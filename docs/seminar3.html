@@ -15,12 +15,11 @@
 Room 302, the 2nd experimental building at POSTECH<br>
 <strong>Presenter: Seunghyun Kang</strong></p>
 </blockquote>
-<p>The physical quantities which contain the most information in MD (Molecular Dynamics) simulation is the potential energy of interested system, considering that the evaluation of potential energy  would lead to the force, velocity and acceleration of each atom in the system. 
+<p>The physical quantities which contain the crucial information in MD (Molecular Dynamics) simulation is the potential energy of interested system, considering that the evaluation of potential energy would lead to the force, velocity and acceleration of each atom in the system. 
   Therefore, the speed and accuracy of computing potential energy is directly related to reliability and efficiency of simulation. 
-  For these reasons, various numerical methodologies to compute potential energy have been developed so far and some of these methods are adopted in MD simulation packages in nowadays. 
-  However, almost all of the numerical methodologies have trade-off relation between accuracy and efficiency, along with the inherent limitation and numerical error.
-  These limitations affect the MD simulation in the form of artifacts that describes different physics from real-world physics. 
-  To proceed advanced simulations research, we must understand these things for establishing reasonable model system. 
+  For these reasons, various methodologies to compute potential energy have been developed so far and some of these methods are adopted in MD simulation packages in nowadays. 
+  However, the intrinsic nature of trade-off relation between accuracy and efficiency along with the inherent limitation and numerical error in numerical methods would lead to the artifacts in simulation that describes unphysical physics from real-world physics.
+  To ensure the accuracy and efficiency of simulation in computational chemistry research, we must understand the theory and bottlenecks of several energy computation algorithms for establishing reasonable model system. 
   Moreover, we can derive much more accurate, acceptable result and conclusions when we recognize the artifacts of the model system.</p>
 <ul></ul>
 <p>In this seminar, I’ll present ‘How potential energy calculation algorithm works and how it affects to result of the system?’. 
@@ -30,15 +29,15 @@ Room 302, the 2nd experimental building at POSTECH<br>
   Lastly, comparison between CPU work and GPU work in perspective of computation and acceleration strategies of nonbonding potential energy calculation by using GPUs[8,9] will be the last topic for this presentation.</p>
 <h4 id="Reference">Reference</h4>
 <ul>
-<li> [1] Stenhammar, J., Karlström, G., & Linse, P. Structural anisotropy in polar fluids subjected to periodic boundary conditions. <em>J. Chem. Theory Comput.</em>, <strong>2011</strong>, 7(12), 4165-4174.</li>
-<li> [2] Celebi, A. T., Jamali, S. H., Bardow, A., Vlugt, T. J., & Moultos, O. A. Finite-size effects of diffusion coefficients computed from molecular dynamics: a review of what we have learned so far. <em>Mol. Sim.</em>, <strong>2021</strong>, 47(10-11), 831-845.</li>
-<li> [3] Allen, M. P., & Tildesley, D. J. Computer simulation of liquids 2thed. <em>Oxford univeristy press</em>, <strong>2017</strong>.</li>
-<li> [4] Shirts, M. R., Mobley, D. L., Chodera, J. D., & Pande, V. S. Accurate and efficient corrections for missing dispersion interactions in molecular simulations. <em>J. Phys. Chem. B</em>, <strong>2007</strong>, 111(45), 13052-13063.</li>
-<li> [5] Tironi, I. G., Sperb, R., Smith, P. E., & van Gunsteren, W. F. A generalized reaction field method for molecular dynamics simulations. <em>J. Chem. Phys.</em>, <strong>1995</strong>, 102(13), 5451-5459.</li>
-<li> [6] Hub, J. S., De Groot, B. L., Grubmüller, H., & Groenhof, G. Quantifying artifacts in Ewald simulations of inhomogeneous systems with a net charge. <em>J. Chem. Theory Comput.</em>, <strong>2014</strong>, 10(1), 381-390.</li>
-<li> [7] Boresch, S., & Steinhauser, O. Presumed versus real artifacts of the Ewald summation technique: The importance of dielectric boundary conditions. <em>Berichte der Bunsengesellschaft für physikalische Chemie</em>, <strong>1994</strong>, 101(7), 1019-1029.</li>
-<li> [8] George, A., Mondal, S., Purnaprajna, M., & Athri, P. Review of Electrostatic Force Calculation Methods and Their Acceleration in Molecular Dynamics Packages Using Graphics Processors. <em>ACS omega</em>, <strong>2022</strong>, 7(37), 32877-32896.</li>
-<li> [9] Eastman, P., & Pande, V. S. Efficient nonbonded interactions for molecular dynamics on a graphics processing unit. <em>J. Chem. Theory Comput.</em>, <strong>2010</strong>, 31(6), 1268-1272.</li>
+[1] Stenhammar, J., Karlström, G., & Linse, P. Structural anisotropy in polar fluids subjected to periodic boundary conditions. <em>J. Chem. Theory Comput.</em>, <strong>2011</strong>, 7(12), 4165-4174.<br>
+[2] Celebi, A. T., Jamali, S. H., Bardow, A., Vlugt, T. J., & Moultos, O. A. Finite-size effects of diffusion coefficients computed from molecular dynamics: a review of what we have learned so far. <em>Mol. Sim.</em>, <strong>2021</strong>, 47(10-11), 831-845.<br>
+[3] Allen, M. P., & Tildesley, D. J. Computer simulation of liquids 2thed. <em>Oxford univeristy press</em>, <strong>2017</strong>.<br>
+[4] Shirts, M. R., Mobley, D. L., Chodera, J. D., & Pande, V. S. Accurate and efficient corrections for missing dispersion interactions in molecular simulations. <em>J. Phys. Chem. B</em>, <strong>2007</strong>, 111(45), 13052-13063.<br>
+[5] Tironi, I. G., Sperb, R., Smith, P. E., & van Gunsteren, W. F. A generalized reaction field method for molecular dynamics simulations. <em>J. Chem. Phys.</em>, <strong>1995</strong>, 102(13), 5451-5459.<br>
+[6] Hub, J. S., De Groot, B. L., Grubmüller, H., & Groenhof, G. Quantifying artifacts in Ewald simulations of inhomogeneous systems with a net charge. <em>J. Chem. Theory Comput.</em>, <strong>2014</strong>, 10(1), 381-390.<br>
+[7] Boresch, S., & Steinhauser, O. Presumed versus real artifacts of the Ewald summation technique: The importance of dielectric boundary conditions. <em>Berichte der Bunsengesellschaft für physikalische Chemie</em>, <strong>1994</strong>, 101(7), 1019-1029.<br>
+[8] George, A., Mondal, S., Purnaprajna, M., & Athri, P. Review of Electrostatic Force Calculation Methods and Their Acceleration in Molecular Dynamics Packages Using Graphics Processors. <em>ACS omega</em>, <strong>2022</strong>, 7(37), 32877-32896.<br>
+[9] Eastman, P., & Pande, V. S. Efficient nonbonded interactions for molecular dynamics on a graphics processing unit. <em>J. Chem. Theory Comput.</em>, <strong>2010</strong>, 31(6), 1268-1272.<br>
 </ul>
 </div>
 </body>
