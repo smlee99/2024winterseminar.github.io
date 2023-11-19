@@ -15,11 +15,19 @@
 Room 302, the 2nd experimental building at POSTECH<br>
 <strong>Presenter: Seunghyun Kang</strong></p>
 </blockquote>
-<p>The physical quantities which contain the most information in MD (Molecular Dynamics) simulation is the system’s potential energy. Because potential energy of the system can provide almost all of information about force, velocity and acceleration of each atom in the system. Therefore, the speed and accuracy of computing potential energy is directly related to reliability and efficiency of simulation. For these reasons, various methodologies to compute numerical potential energy were developed and some of these methods are adopted in MD simulation packages in nowadays. However, almost all of the numerical methodologies have trade-off relation between accuracy and efficiency. Also, inherent limitation and numerical error always exists.</p>
+<p>The physical quantities which contain the most information in MD (Molecular Dynamics) simulation is the potential energy of interested system, considering that the evaluation of potential energy  would lead to the force, velocity and acceleration of each atom in the system. 
+  Therefore, the speed and accuracy of computing potential energy is directly related to reliability and efficiency of simulation. 
+  For these reasons, various numerical methodologies to compute potential energy have been developed so far and some of these methods are adopted in MD simulation packages in nowadays. 
+  However, almost all of the numerical methodologies have trade-off relation between accuracy and efficiency, along with the inherent limitation and numerical error.
+  These limitations affect the MD simulation in the form of artifacts that describes different physics from real-world physics. 
+  To proceed advanced simulations research, we must understand these things for establishing reasonable model system. 
+  Moreover, we can derive much more accurate, acceptable result and conclusions when we recognize the artifacts of the model system.</p>
 <ul></ul>
-<p>These limitations affect the MD simulation in the form of artifacts that describes different physics from real-world physics. To proceed advanced simulations research, we must understand these things for establishing reasonable model system. Moreover, we can derive much more accurate, acceptable result and conclusions when we recognize the artifacts of the model system.</p>
-<ul></ul>
-<p>In this seminar, I’ll present ‘How potential energy calculation algorithm works and how it affects to result of the system?’. There are four several topics to answer these questions. First, I’ll introduce PBC (Periodic Boundary Condition)[1], minimum size condition, and finite size effect[2] of MD simulation. Then, the advantages and limitations of well-known nonbonding potential energy computation methodologies[3] (PME, P3M, Reaction Field, MEMD …, especially sPME[4] and Reaction Field[5] which was implemented in OpenMM) will be treated. Most of MD simulation packages, utilizes PME for nonbonding energy computation. The reasons and crucial artifacts of PME method[6,7] will be discussed in third question. Lastly, comparison between CPU work and GPU work in perspective of computation and acceleration strategies of nonbonding potential energy calculation by using GPUs[8,9] will be the last topic for this presentation.</p>
+<p>In this seminar, I’ll present ‘How potential energy calculation algorithm works and how it affects to result of the system?’. 
+  There are four several topics to answer these questions. First, I’ll introduce PBC (Periodic Boundary Condition)[1], minimum size condition, and finite size effect[2] of MD simulation. 
+  Then, the advantages and limitations of well-known nonbonding potential energy computation methodologies[3] (PME, P3M, Reaction Field, MEMD …, especially sPME[4] and Reaction Field[5] which was implemented in OpenMM) will be treated. 
+  Most of MD simulation packages, utilizes PME for nonbonding energy computation. The reasons and crucial artifacts of PME method[6,7] will be discussed in third question. 
+  Lastly, comparison between CPU work and GPU work in perspective of computation and acceleration strategies of nonbonding potential energy calculation by using GPUs[8,9] will be the last topic for this presentation.</p>
 <h4 id="Reference">Reference</h4>
 <ul>
 <li> [1] Stenhammar, J., Karlström, G., & Linse, P. Structural anisotropy in polar fluids subjected to periodic boundary conditions. <em>J. Chem. Theory Comput.</em>, <strong>2011</strong>, 7(12), 4165-4174.</li>
@@ -30,7 +38,7 @@ Room 302, the 2nd experimental building at POSTECH<br>
 <li> [6] Hub, J. S., De Groot, B. L., Grubmüller, H., & Groenhof, G. Quantifying artifacts in Ewald simulations of inhomogeneous systems with a net charge. <em>J. Chem. Theory Comput.</em>, <strong>2014</strong>, 10(1), 381-390.</li>
 <li> [7] Boresch, S., & Steinhauser, O. Presumed versus real artifacts of the Ewald summation technique: The importance of dielectric boundary conditions. <em>Berichte der Bunsengesellschaft für physikalische Chemie</em>, <strong>1994</strong>, 101(7), 1019-1029.</li>
 <li> [8] George, A., Mondal, S., Purnaprajna, M., & Athri, P. Review of Electrostatic Force Calculation Methods and Their Acceleration in Molecular Dynamics Packages Using Graphics Processors. <em>ACS omega</em>, <strong>2022</strong>, 7(37), 32877-32896.</li>
-<li> [9] Eastman, P., & Pande, V. S. Efficient nonbonded interactions for molecular dynamics on a graphics processing unit. <em>J. Chem. Theory Comput.</em>,, <strong>2010</strong>, 31(6), 1268-1272.</li>
+<li> [9] Eastman, P., & Pande, V. S. Efficient nonbonded interactions for molecular dynamics on a graphics processing unit. <em>J. Chem. Theory Comput.</em>, <strong>2010</strong>, 31(6), 1268-1272.</li>
 </ul>
 </div>
 </body>
