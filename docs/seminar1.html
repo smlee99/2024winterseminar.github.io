@@ -9,34 +9,37 @@
 </head>
 
 <body class="stackedit">
-  <div class="stackedit__html"><h3 id="abstract">Seminar #1 - Integration</h3>
+  <div class="stackedit__html"><h3 id="abstract">Seminar #1 - Integration Algorithm</h3>
 <blockquote>
 <p>2024 Winter Molecular Simulation Seminar<br>
 Room 302, the 2nd experimental building at POSTECH<br>
 <strong>Presenter: Sangmin Lee</strong></p>
 </blockquote>
-<p> Constructing a theoretical framework that aims to predict the observable static and dynamic properties of a many-body system starting from its microscopic constituents and their interactions is important to establish a bridge between the microscopic and macroscopic realms.[1] 
+<p> Constructing a theoretical framework that aims to predict the observable static and dynamic properties of a many-body system starting from its microscopic constituents and their interactions is important to establish a bridge between the microscopic and macroscopic realms.
   For such purpose, Boltzmann previously proposed the idea to derive the statistical mechanics from Newtonian mechanics, which was remained as an epistemological distress for most people at that time since solving the equations of motion for macroscopic matter (for O(N^23)) is simply an untenable task.
   One approach to deal with this complexity is to consider a system, not of 10^23 particles, but of a much smaller number particles and solve the equations of motion numerically subject to initial conditions and the boundary conditions.
   This is the essence of the molecular dynamics (MD) technique, where the numerical solution (trajectory) of the equations of motion is generated and analyzed via the rules of statistical mechanics.
   MD simulation have become an integral part of modern theoretical reserach to elucidate the molecular-level understanding of several physical/chemical system and phenomena.
-  </p>
+  Although the laws of classical mechanics turn out to be a surprisingly good approximation at the mmolecular level, the numerical algorithms to integrating the equation of motion have been found to cause the instability or artifact in simulation or limit the accessible time scale.
+  This leads many people to devise clever numerical solvers (integrators) for the resulting equations of motion in an accurate, efficient, and reliable manner. </p>
 <ul></ul>
-<p>In this seminar, I’ll present ‘How potential energy calculation algorithm works and how it affects to result of the system?’. 
-  Addressing these questions are divided into four sections: First, I’ll introduce PBC (Periodic Boundary Condition)[1], minimum image convention, and finite size effect[2] of MD simulation. 
-  Then, the advantages and limitations of popularly used potential energy computation methodologies[3] (PME, P3M, Reaction Field, MEMD, especially sPME[4] and Reaction Field[5] which is being implemented in OpenMM) will be treated. 
-  Most of MD simulation packages, utilizes PME for nonbonding energy computation. The reasons and crucial artifacts of PME method[6,7] will be discussed in third question. 
-  Lastly, comparison between CPU work and GPU work in perspective of computation and acceleration strategies of nonbonding potential energy calculation by using GPUs[8,9] will be the last topic for this presentation.</p>
+<p>In this talk, I'll discuss the history of the devlopment of integrators in MD simulation community by focusing on the desirable properties that integrators should satisfy.
+  Such properties include the long time step, numerically stable, and accurate configuration/dynamics sampling through simulation.
+  To extend the time step used in integrators, I'll explain the constraint algorithm[1-3],  multistep integrator[4-5], and hydrogen mass repartitioning(HMR)[6].
+  To ensure the numerical stability of integrators, I'll explain the energy- drift [7] and resonance instabilities [8] issue and how such problems have been resolved through the improvement of integration algorithms.
+  To run a reliable integration, I'll explain the dependence of integrators on configuraitonal sampling [9] and dynamic properties of intersted system.
+  Lastly, I'll briefly show the way several integrators are implemented in OpenMM, which should be interested to most of us.</p>
 <h4 id="Reference">Reference</h4>
-[1] Stenhammar, J., Karlström, G., & Linse, P. Structural anisotropy in polar fluids subjected to periodic boundary conditions. <em>J. Chem. Theory Comput.</em>, <strong>2011</strong>, 7(12), 4165-4174.<br>
-[2] Celebi, A. T., Jamali, S. H., Bardow, A., Vlugt, T. J., & Moultos, O. A. Finite-size effects of diffusion coefficients computed from molecular dynamics: a review of what we have learned so far. <em>Mol. Sim.</em>, <strong>2021</strong>, 47(10-11), 831-845.<br>
-[3] Allen, M. P., & Tildesley, D. J. Computer simulation of liquids 2thed. <em>Oxford univeristy press</em>, <strong>2017</strong>.<br>
-[4] Shirts, M. R., Mobley, D. L., Chodera, J. D., & Pande, V. S. Accurate and efficient corrections for missing dispersion interactions in molecular simulations. <em>J. Phys. Chem. B</em>, <strong>2007</strong>, 111(45), 13052-13063.<br>
-[5] Tironi, I. G., Sperb, R., Smith, P. E., & van Gunsteren, W. F. A generalized reaction field method for molecular dynamics simulations. <em>J. Chem. Phys.</em>, <strong>1995</strong>, 102(13), 5451-5459.<br>
-[6] Hub, J. S., De Groot, B. L., Grubmüller, H., & Groenhof, G. Quantifying artifacts in Ewald simulations of inhomogeneous systems with a net charge. <em>J. Chem. Theory Comput.</em>, <strong>2014</strong>, 10(1), 381-390.<br>
-[7] Boresch, S., & Steinhauser, O. Presumed versus real artifacts of the Ewald summation technique: The importance of dielectric boundary conditions. <em>Berichte der Bunsengesellschaft für physikalische Chemie</em>, <strong>1994</strong>, 101(7), 1019-1029.<br>
-[8] George, A., Mondal, S., Purnaprajna, M., & Athri, P. Review of Electrostatic Force Calculation Methods and Their Acceleration in Molecular Dynamics Packages Using Graphics Processors. <em>ACS omega</em>, <strong>2022</strong>, 7(37), 32877-32896.<br>
-[9] Eastman, P., & Pande, V. S. Efficient nonbonded interactions for molecular dynamics on a graphics processing unit. <em>J. Chem. Theory Comput.</em>, <strong>2010</strong>, 31(6), 1268-1272.<br>
+[1] Miyamoto, S., & Kollman, P. A. Settle: An analytical version of the SHAKE and RATTLE algorithm for rigid water models. <em>J. Comp. Chem.</em>em>, <strong>1992</strong>, 13(8), 952-962.<br>
+[2] Hess, B., Bekker, H., Berendsen, H. J., & Fraaije, J. G. LINCS: A linear constraint solver for molecular simulations. <em>J. Comp. Chem.</em>, <strong>1997</strong> 18(12), 1463-1472.<br>
+[3] Eastman, P., & Pande, V. S. Constant constraint matrix approximation: a robust, parallelizable constraint method for molecular simulations. <em>J. Chem. Theory. Comput.</em>, <strong>2010</strong>, 6(2), 434-437.<br>
+[4] Tuckerman, M. B. B. J. M., Berne, B. J., & Martyna, G. J. Reversible multiple time scale molecular dynamics. <em>J. Chem. Phys.</em>, <strong>1992</strong>, 97(3), 1990-2001.<br>
+[5] Lagardere, L., Aviat, F., & Piquemal, J. P. Pushing the limits of multiple-time-step strategies for polarizable point dipole molecular dynamics. <em>J. Phys. Chem. Lett.</em>, <strong>2019</strong>, 10(10), 2593-2599.
+[6] Feenstra, K. A., Hess, B., & Berendsen, H. J. Improving efficiency of large time‐scale molecular dynamics simulations of hydrogen‐rich systems. <em>J. Comp. Chem.</em>, <strong>1999</strong>, 20(8), 786-798.<br>
+[7] Kitchen, D. B., Hirata, F., Westbrook, J. D., Levy, R., Kofke, D., & Yarmush, M. Conserving energy during molecular dynamics simulations of water, proteins, and proteins in water. <em>J. Comp. Chem.</em>, <strong>1990</strong>, 11(10), 1169-1180.<br>
+[8] Schlick, T., Mandziuk, M., Skeel, R. D., & Srinivas, K. Nonlinear resonance artifacts in molecular dynamics simulations. <em>J. Chem. Phys.</em>, <strong>1998</strong>, 140(1), 1-29.<br>
+[9] Fass, J., Sivak, D. A., Crooks, G. E., Beauchamp, K. A., Leimkuhler, B., & Chodera, J. D. Quantifying configuration-sampling error in Langevin simulations of complex molecular systems. <em>Entropy</em>, <strong>2018</strong>, 20(5), 318.<br>
+
 </div>
 </body>
 
