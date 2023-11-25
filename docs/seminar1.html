@@ -20,14 +20,14 @@ Room 302, the 2nd experimental building at POSTECH<br>
   One approach to deal with this complexity is to consider a system, not of 10^23 particles, but of a much smaller number particles and solve the equations of motion numerically subject to initial conditions and the boundary conditions.
   This is the essence of the molecular dynamics (MD) technique, where the numerical solution (trajectory) of the equations of motion is generated and analyzed via the rules of statistical mechanics.
   MD simulation have become an integral part of modern theoretical reserach to elucidate the molecular-level understanding of several physical/chemical system and phenomena.
-  Although the laws of classical mechanics turn out to be a surprisingly good approximation at the mmolecular level, the numerical algorithms to integrating the equation of motion have been found to cause the instability or artifact in simulation or limit the accessible time scale.
+  Although the laws of classical mechanics turn out to be a surprisingly good approximation at the mmolecular level, the numerical algorithms to integrate the equation of motion have been found to cause the instability or artifact in simulation or limit the accessible time scale.
   This leads many people to devise clever numerical solvers (integrators) for the resulting equations of motion in an accurate, efficient, and reliable manner. </p>
 <ul></ul>
 <p>In this talk, I'll discuss the history of the devlopment of integrators in MD simulation community by focusing on the desirable properties that integrators should satisfy.
   Such properties include the long time step, numerically stable, and accurate configuration/dynamics sampling through simulation.
   To extend the time step used in integrators, I'll explain the constraint algorithm[1-3],  multistep integrator[4-5], and hydrogen mass repartitioning(HMR)[6].
   To ensure the numerical stability of integrators, I'll explain the energy- drift [7] and resonance instabilities [8] issue and how such problems have been resolved through the improvement of integration algorithms.
-  To run a reliable integration, I'll explain the dependence of integrators on configuraitonal sampling [9] and dynamic properties of intersted system.
+  To integrate in a reliable manner, I'll explain the dependence of integrators on configurational sampling [9] and dynamic properties of intersted system.
   Lastly, I'll briefly show the way several integrators are implemented in OpenMM, which should be interested to most of us.</p>
 <h4 id="Reference">Reference</h4>
 [1] Miyamoto, S., & Kollman, P. A. Settle: An analytical version of the SHAKE and RATTLE algorithm for rigid water models. <em>J. Comp. Chem.</em>em>, <strong>1992</strong>, 13(8), 952-962.<br>
