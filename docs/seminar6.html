@@ -9,7 +9,7 @@
 </head>
 
 <body class="stackedit">
-  <div class="stackedit__html"><h3 id="abstract">Seminar #2 - Monte Carlo Advanced</h3>
+  <div class="stackedit__html"><h3 id="abstract">Seminar #2 - Enhanced Monte Carlo</h3>
 <blockquote>
 <p>2024 Winter Molecular Simulation Seminar<br>
 Room 302, the 2nd experimental building at POSTECH<br>
@@ -21,11 +21,10 @@ Room 302, the 2nd experimental building at POSTECH<br>
   Although MC simulation is a powerful tool for studying the equilibrium properties of matter, it was progressively realized that in complex condensed-phase systems, however, it is difficult to design MC moves with high acceptance probabilities that also rapidly sample uncorrelated configurations.
   These obserations clearly indicated that improved MC moves and algorithms were needed and in the subsequent years, the underlying methodological problems received considerable attention. </p>
 <ul></ul>
-<p>In this talk, I'll discuss the history of the development of integrators in MD simulation community by focusing on the desirable properties that integrators should satisfy.
-  Such properties include the long time step, numerically stable, and accurate configuration/dynamics sampling through simulation.
-  To extend the time step used in integrators, I'll explain the constraint algorithm[1-3],  multistep integrator[4-5], and hydrogen mass repartitioning(HMR)[6].
-  To ensure the numerical stability of integrators, I'll explain the energy- drift [7] and resonance instabilities [8] issue and how such problems have been resolved through the improvement of integration algorithms.
-  To integrate in a reliable manner, I'll explain the dependence of integrators on configurational sampling [9] and dynamic properties [10] of intersted system.
+<p>In this talk, I'll discuss the theoretical framework to extend the repertoire of useful MC moves that can be applied to condensed-phase systems. 
+  The key idea here is to introduce the idea of expanded ensembles, which is a set of sub-ensembles linked by a coupling parameter.
+  By changing the value of coupling parameter in an expanded ensemble, one can perform a random walk between the corresponding sub-ensembles and calculate thermodynamic properties with high acceptance probabilities.
+  dd
   Lastly, I'll briefly show the way several integrators are implemented in OpenMM, which should be interested to most of us.</p>
 <h4 id="Reference">Reference</h4>
 [1] Miyamoto, S., & Kollman, P. A. Settle: An analytical version of the SHAKE and RATTLE algorithm for rigid water models. <em>J. Comp. Chem.</em>, <strong>1992</strong>, 13(8), 952-962.<br>
