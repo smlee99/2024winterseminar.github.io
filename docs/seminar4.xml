@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seminar 4</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+<body class="stackedit">
+  <div class="stackedit__html"><h3 id="abstract">Seminar #4 - Constant Ensemble Simulation</h3>
+<blockquote>
+<p>2024 Winter Molecular Simulation Seminar<br>
+Room 302, the 2nd experimental building at POSTECH<br>
+<strong>Presenter: Seungbin Hong</strong></p>
+</blockquote>
+<p> Statistical mechanics is a study that deals with the possible energy distribution a system can have in a certain state.
+  The Maxwell-Boltzmann distribution, which means that the average speed of each particle is based on their mass and temperature.
+  In order to measure the energy of the system in fixed temperature, we can organize the system using thermodynamic variables that can actually be controlled. 
+  Representative examples include Canonical Ensemble and Isothermal-Isobaric ensemble. 
+  In both ensembles, observations are conducted at a set temperature, and in MD, a thermostat is used to fix the temperature. </p>
+<ul></ul>
+<p>Temperature control algorithms using thermostats can be divided into strong coupling methods, weak coupling methods, stochastic methods, and extended system dynamics.[1][2]
+  Topics covered in more depth in this presentation include stochastic methods that randomly apply the new speed of each atom based on the Maxwell-Boltzmann distribution. Other methods ,velocity-rescaling method for get better dynamics. 
+  For example, Nose-Hoover chain methods applying temperature as an artificial variable rather than a random element[4]. 
+  Extended system thermostats that can explain and dynamics, strong coupling methods and weak coupling methods that can be distinguished according to the strength of interaction between each atom are discussed with formulas, and the unique strengths and weaknesses of these temperature control algorithms are discussed.
+  In this seminar, we will dealing about each type of thermostats pros and cons based on equation and physical meaning[5].
+  In addition, due to problems related to the thermostat, when using the velocity rescaling technique, the motion of the center-of-mass does not take into account high-frequency motion at all, and when only one thermostat is used, the kinetic energy exchange between solvent and solute is too slow.
+  For example, when using the Berendsen weak coupling thermostat in REMD simulation, there was also the problem of the Berendsen thermostat not being able to solve the canonical ensemble [6], which is a situation in which correct dynamics cannot be considered due to too small a temperature gradient.
+  And in non-ergodic system , Nose-Hoover thermostat can't explore all feasible case and does not tield a canoniccal distribution in phase space [7]. </p>
+<h4 id="Reference">Reference</h4>
+[1] Jirasak Wong-ekkabut, Mikko Karttunen. The good, the bad and the user in soft matter simulations. <em>Biochim. Biophys. Acta, Biomembr. </em>, <strong>2016</strong>, 1858, 10, 2529-2538.<br>
+[2] Qia Ke, Xiaoting Gong, Shouwei Liao, Chongxiong Duan, Libo Li. Effects of thermostats/barostats on physical properties of liquids by molecular dynamics simulations. <em>J. Mol. Liq.</em>, <strong>2022</strong>, 365, 120116.<br>
+[3] Harvey, S. C.; Tan, R. K.-Z.; Cheatham, T. E. The Flying Ice Cube: Velocity Rescaling in Molecular Dynamics Leads to Violation of Energy Equipartition. <em> J. Comput. Chem.</em>, <strong>1998</strong>, 19, 726–740.<br>
+[4] Lingenheil, M. and Denschlag, R. and Reichold, R. and Tavan, P. The “Hot-Solvent/Cold-Solute” Problem Revisited. <em>J. Chem. Theory. Comput.</em>, <strong>2008</strong>, 4, 8, 1293–1306.<br>
+[5] Frenkel, D. and Smit, B. (2002) Understanding Molecular Simulations. 2nd Edition, <em>Academic Press, San Diego .</em>,<strong>2002.</strong><br>
+[6] Rosta, Edina and Buchete, Nicolae-Viorel and Hummer, Gerhard, Thermostat Artifacts in Replica Exchange Molecular Dynamics Simulations. <em>J. Chem. Theory. Comput.</em>, <strong>2009</strong>, 5, 5, 1393–1399.<br>
+[7] D. J. Evans; B. L. Holian, T. E. The Nose–Hoover thermostat. <em> J. Chem. Phys.</em>, <strong>1985</strong>, 83, 4069–4074.<br>
+</body>
+</html>
