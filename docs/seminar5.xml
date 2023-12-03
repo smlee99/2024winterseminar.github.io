@@ -15,8 +15,8 @@
 Room 302, the 2nd experimental building at POSTECH<br>
 <strong>Presenter: Seunghyun Kang</strong></p>
 </blockquote>
-<p>Monte Carlo (MC) methods utilizes random number generator to derive certain statistical quantities in computational science. 
-  As molecular simulation is also one field of the computational science, various MC algorithms were applied to develop the functionality of simulation. 
+<p>Monte Carlo (MC) methods utilizes the random number generator to derive certain statistical quantities for given system. 
+  Along with the MD simulation to sample the statistical ensembles, various MC algorithms have been developed as a tool for molecular simulation.
   For example, MC simulation can cover the chemical phenomena that Molecular Dynamics (MD) cannot implement. Moreover, combined MC algorithms with MD enhanced the functionality, accuracy, and efficiency of MD simulations. 
   Unlike MD simulation works, MC adapt random movement of atoms and molecules with particular acceptance criteria. 
   Therefore, we can derive initial molecular model system to the given thermodynamic equilibrium state by controlling the induced random movement and acceptance criteria. 
