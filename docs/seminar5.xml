@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seminar 5</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html"><h3 id="abstract">Seminar #5 - Monte Carlo</h3>
+<blockquote>
+<p>2024 Winter Molecular Simulation Seminar<br>
+Room 302, the 2nd experimental building at POSTECH<br>
+<strong>Presenter: Seunghyun Kang</strong></p>
+</blockquote>
+<p>Monte Carlo (MC) methods utilizes random number generator to derive certain statistical quantities in computational science. 
+  As molecular simulation is also one field of the computational science, various MC algorithms were applied to develop the functionality of simulation. 
+  For example, MC simulation can cover the chemical phenomena that Molecular Dynamics (MD) cannot implement. Moreover, combined MC algorithms with MD enhanced the functionality, accuracy, and efficiency of MD simulations. 
+  Unlike MD simulation works, MC adapt random movement of atoms and molecules with particular acceptance criteria. 
+  Therefore, we can derive initial molecular model system to the given thermodynamic equilibrium state by controlling the induced random movement and acceptance criteria. 
+  With these two characteristics, movement and acceptance criteria, gives distinct technical profits that MD cannot. 
+  To apply these utility and applicability of MC in molecular simulation researches, understanding of theoretical foundations and physical insights of MC is necessary.</p>
+<ul></ul>
+<p>In this seminar, basic concepts of MC and its benefits in perspective of induced random movement will be the target of this talk. 
+  At first, I’ll explain fundamental principles of MC (ensemble average, metropolis algorithm, acceptance, etc..)[1]. 
+  Then the sampling methods in NVE, NVT, NPT ensembles<sup>[1]</sup> and MonteCarloBarostat in OpenMM[2,3] will be introduced. 
+  The main ensembles that will be discussed in this seminar is Grand Canonical Monte Carlo (GCMC) and MC in Gibbs ensemble. 
+  In GCMC, the basic principle for molecule inserting called Widom particle insertion method<sup>[4,5]</sup> and will be introduced. 
+  Particle insertion in molecule system can bring the advantages or applications in MC, but it also takes some technical issues to implement MC. 
+  These applications<sup>[6-10]</sup>, technical issues<sup>[11]</sup>, and its solution<sup>[11-13]</sup> will be illustrated. The last topic of this talk is MC in Gibbs ensemble. 
+  Its theoretical foundation<sup>[14,15]</sup> and its application in various field<sup>[16-19]</sup> will be treated.</p>
+<h4 id="Reference">References</h4>
+<ul>
+[1] Frenkel, D., & Smit, B. Understanding molecular simulation: from algorithms to applications. <em>San Diego: Academic Press</em>, <strong>2023</strong>.<br>
+[2] Chow, K. H., & Ferguson, D. M. Isothermal-isobaric molecular dynamics simulations with Monte Carlo volume sampling. <em>Comput. Phys. Commun.</em>, <strong>1995</strong>, 91(1-3), 283-289.<br>
+[3] &#8491;qvist, J., Wennerstr&#246;m, P., Nervall, M., Bjelic, S., & Brandsdal, B. O.  Molecular dynamics simulations of water and biomolecules with a Monte Carlo constant pressure algorithm. <em>Chem. Phys. Lett.</em>, <strong>2004</strong>, 384(4-6), 288-294.<br>
+[4] Widom, B.  Some topics in the theory of fluids. <em>J. Chem. Phys.</em>, <strong>1963</strong>. 39(11), 2808-2812.<br>
+[5] Widom, B. Potential-distribution theory and the statistical mechanics of fluids. <em>J. Phys. Chem.</em>, <strong>1982</strong>, 86(6), 869-872.<br>
+[6] Wilmer, C. E., & Snurr, R. Q. Towards rapid computational screening of metal-organic frameworks for carbon dioxide capture: Calculation of framework charges via charge equilibration. <em>J. Chem. Eng.</em>,  <strong>2011</strong>, 171(3), 775-781.<br>
+[7] Kim, J., Lin, L. C., Martin, R. L., Swisher, J. A., Haranczyk, M., & Smit, B. Large-scale computational screening of zeolites for ethane/ethene separation. <em>Langmuir</em>, <strong>2012</strong>, 28(32), 11914-11919.<br>
+[8] Mick, J. R., Soroush Barhaghi, M., Jackman, B., Schwiebert, L., & Potoff, J. J. Optimized Mie potentials for phase equilibria: Application to branched alkanes. <em>J. Chem. Eng. Data</em>, <strong>2017</strong>, 62(6), 1806-1818.<br>
+[9] Errington, J. R., & Panagiotopoulos, A. Z. A new intermolecular potential model for the n-alkane homologous series. <em>J. Phys. Chem. B</em>, <strong>1999</strong>, 103(30), 6314-6322.<br>
+[10] Floriano, M. A., Caponetti, E., & Panagiotopoulos, A. Z. Micellization in model surfactant systems. <em>Langmuir</em>, <strong>1999</strong>, 15(9), 3143-3151.<br>
+[11] Soroush Barhaghi, M., Torabi, K., Nejahi, Y., Schwiebert, L., & Potoff, J. J. Molecular exchange Monte Carlo: A generalized method for identity exchanges in grand canonical Monte Carlo simulations. <em>J. Chem. Phys.</em>,  <strong>2018</strong>, 149(7).<br>
+[12] Ferrenberg, A. M., & Swendsen, R. H. Optimized monte carlo data analysis. <em>Phys. Rev. Lett.</em>, <strong>1989</strong>, 63(12), 1195.<br>
+[13] Ferrenberg, A. M., & Swendsen, R. H. New Monte Carlo technique for studying phase transitions. <em>Phys. Rev. Lett.</em>, <strong>1988</strong>,  61(23), 2635.<br>
+[14] Lopes, J. C., & Tildesley, D. J. Multiphase equilibria using the Gibbs ensemble Monte Carlo method. <em>Mol. Phys.</em>, <strong>1997</strong>, 92(2), 187-196.<br>
+[15] Panagiotopoulos, A. Z., Quirke, N., Stapleton, M., & Tildesley, D. J. Phase equilibria by simulation in the Gibbs ensemble: alternative derivation, generalization and application to mixture and membrane equilibria. <em>Mol. Phys.</em>, <strong>1988</strong>, 63(4), 527-545.<br>
+[16] Barhaghi, M. S., & Potoff, J. J. Prediction of phase equilibria and Gibbs free energies of transfer using molecular exchange Monte Carlo in the Gibbs ensemble. <em>Fluid Phase Equilib.</em>, <strong>2019</strong>, 486, 106-118.<br>
+[17] Chen, B., Siepmann, J. I., & Klein, M. L. Direct Gibbs ensemble Monte Carlo simulations for solid− vapor phase equilibria: applications to Lennard−Jonesium and carbon dioxide. <em>J. Phys. Chem. B.</em>, <strong>2001</strong>, 105(40), 9840-9848.<br>
+[18] Punnathanam, S. N. A Gibbs-ensemble based technique for Monte Carlo simulation of electric double layer capacitors (EDLC) at constant voltage. <em>J. Chem. Phys.</em>, <strong>2014</strong>, 140(17).<br>
+[19] Puibasset, J. Phase coexistence in heterogeneous porous media: A new extension to Gibbs ensemble Monte Carlo simulation method. <em>J. Chem. Phys.</em>, <strong>2005</strong>, 122(13).<br>
+
+</ul>
+</div>
+</body>
+
+</html>
