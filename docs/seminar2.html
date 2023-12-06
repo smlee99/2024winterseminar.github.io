@@ -9,18 +9,19 @@
 </head>
 
 <body class="stackedit">
-  <div class="stackedit__html"><h3 id="abstract">Seminar #2 - Classical Force Field Model</h3>
+<div class="stackedit__html"><h3 id="abstract">Seminar #2 - Classical Force Field Model</h3>
 <blockquote>
 <p>2024 Winter Molecular Simulation Seminar<br>
 Room 302, the 2nd experimental building at POSTECH<br>
 <strong>Presenter: Seungbin Hong</strong></p>
 </blockquote>
-<p>To estimate intermolecular and intramolecular force with computational method, we have used a force field for a long time in molecular dynamics simulation. 
- With long history of forcefields, many forcefield are aimed to describe feasible result in various atomic scales. It means the electronic degrees of freedom of the molecules are ignored, and only motions of the nuclei are calculated[1].
+<p>To estimate the intermolecular and intramolecular force based on computational approaches, we have used a force field for a long time in molecular dynamics simulation. 
+ With long history of force fields, a diverse range of force fields are aimed to describe the feasible result in various molecular scales. 
+ It means the electronic degrees of freedom of the molecules are ignored, and only motions of the nuclei are calculated[1].
  The basic functional form of potential energy in moelcular mechanics includes bonded terms for interactions of atoms that are linked by covalent bonds, and nonbonded (also termed noncovalent) terms that describe the long-range electrostatic and van-der Waals forces.
- In classical forcefield, the expression for the potential enegy is represented in pairwise additive terms and each terms have been parameterized based on quantum calculations or empirical results for a feasible data. </p>
+ In classical force field, the expression for the potential enegy is represented in pairwise additive terms and each terms have been parameterized based on quantum calculations or based on empirical experimental results. </p>
 <ul></ul>
-<p> But as many people choose various equation in pairwise terms and methods for parameterization, an conditional method that provides the correct answer has not been determined.
+<p> Since many people in MD community have chosen various empirical formulas and methods for parameterization, the guide for describing the correct physics based on physically-corrected model should be provided.
  Because the classical force fields rely on five terms with a simple physical interpretation, and these are not enough to explain atomic polarizability, more complex coupling terms such as cross coupling between bonds and angle.
  The separation of the potential energy in terms with a simple physical interpretation is not strictly correct, as there is no unique way to “translate” quantum mechanical effects into classical mechanics equations.
  So there’s some example, the monovalent ion parameters used by the AMBER-99 forcefield shows more lower solubility in water [2], too strong intramolecular interaction between Saccharides and these situation let overconcentrated in aqueous solution[3]. Also, In ionic liquid system, experimental validation was limited to densities and the few existing and largely conflicting heats of vaporization literature values [4]. To predict the properties of water from the gas to the condensed phase with high accuracy, not only pair-wised interaction but many-body potentials[5]. And the problem in transition metal cation-π Interactions[6].
