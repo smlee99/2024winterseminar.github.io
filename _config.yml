@@ -159,9 +159,13 @@ events:
   - date: "Seonghyun Kang"
     description: "Force and Energy computation, Monte Carlo, Thermodynamics - Free energy Calculation I, Polarizable Simulation"
   - date: "Sangmin Lee"
-    description: "Integration Algorithm, Enhanced Monte Carlo, Kinetics - Rare event Simulation, Reactive Simulation"
+    description: "Integration Algorithm, Enhanced Monte Carlo, Kinetics - Rare event Simulation, Reactive Simulation - Proton & Electron Transport"
   - date: "Seungbin Hong"
     description: "Classical Force Field, Constant Ensemble Simulation, Thermodynamics - Free energy Calculation II, Coarse-Grained Simulation"
+  - date: "Kyeongjun Jeong"
+    description: "Reactive Simulation - Polymerization"
+  - date: "Junho Lim"
+    description: "Thermodynamics - Markov State Model"
 
 # First image of the Timeline
 
