@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seminar 2</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+<div class="stackedit__html"><h3 id="abstract">Seminar #7 - Thermodynamics - Free energy Calculation I</h3>
+<blockquote>
+<p>2024 Winter Molecular Simulation Seminar<br>
+Room 302, the 2nd experimental building at POSTECH<br>
+<strong>Presenter: Seonghyeon Kang</strong></p>
+</blockquote>
+<p>When we analyze chemical phenomena by various molecular simulation tools, the most powerful information that we can derive is free energy diagram. 
+  This is also true for molecular dynamics and monte-carlo simulation. However, conducting free energy calculation and constructing free energy diagram are not trivial processes. 
+  It also has several issues which mislead into incorrect or incomplete energy diagram. 
+  Especially, there are two main issues, defining reaction coordinate and sampling all regions related to the phenomenon. 
+  The former one is the question how we can choose proper domain variable for describing reaction coordinate axis. 
+  Because of extremely high degree of freedom of complex system, dimensionality reduction technique is needed to visualize reaction pathway easily. 
+  The latter one is corresponded to the question about overcoming high energy barrier for sampling configurational space enough. 
+  This problem leads to novel simulation and sampling techniques, metadynamics and umbrella sampling. 
+  These two techniques enable to sample free energy landscape where ergodicity was hindered. </p>
+<ul></ul>
+<p> In this seminar, three topics of this scheme will be treated. The first topic is ‘How can we define proper and optimal reaction coordinate?’. 
+  In this topic, the theoretical foundation[1] and well-known strategies of constructing reaction coordinates[1-3] will be introduced. 
+  The second topic is umbrella sampling. It includes theoretical basis[4], methods, sampling, analyzing[5] technique, and statistical error analysis[6]. 
+  The last topic is metadynamics. In the last topic, basic principles of metadynamics, choosing CV(collective variable), computing free energy will be treated as theoretical aspect[7]. 
+  Then, the free energy space of alanine dipeptide case study[8] and accuracy of metadynamics[9] will be introduced as practical aspect.</p>
+<h4 id="Reference">References</h4>
+[1] Zinovjev, K., & Tuñón, I., Reaction coordinates and transition states in enzymatic catalysis. <em>Wiley Interdiscip. Rev. Comput. Mol. Sci.</em>, <strong>2018</strong>, 8(1), e1329. <br>
+[2] Banushkina, P. V., & Krivov, S. V., Optimal reaction coordinates. <em>Wiley Interdiscip. Rev. Comput. Mol. Sci.</em>, <strong>2016</strong>, 6(6), 748-763. <br>
+[3] Wu, S., Li, H., & Ma, A., A rigorous method for identifying a one-dimensional reaction coordinate in complex molecules. <em>J. Chem. Theory Comput.</em>, <strong>2022</strong>, 18(5), 2836-2844. <br>
+[4] Torrie, G. M., & Valleau, J. P., Nonphysical sampling distributions in Monte Carlo free-energy estimation: Umbrella sampling. <em>J. Comput. Phys.</em>, <strong>1977</strong>, 23(2), 187-199. <br>
+[5] Kästner, J., Umbrella sampling. <em>Wiley Interdiscip. Rev. Comput. Mol. Sci.</em>, <strong>2011</strong>, 1(6), 932-942. <br>
+[6] Kästner, J., & Thiel, W., Analysis of the statistical error in umbrella sampling simulations by umbrella integration. <em>J. Chem. Phys.</em>, <strong>2006</strong>, 124(23). <br>
+[7] Bussi, G., & Laio, A., Using metadynamics to explore complex free-energy landscapes. <em>Nat. Rev. Phys.</em>, <strong>2020</strong>, 2(4), 200-212. <br>
+[8] Vymetal, J., & Vondrášek, J., Metadynamics As a Tool for Mapping the Conformational and Free-Energy Space of Peptides - The Alanine Dipeptide Case Study. <em>J. Phys. Chem. B</em>, <strong>2010</strong>, 114(16), 5632-5642. <br>
+[9] Laio, A., Rodriguez-Fortea, A., Gervasio, F. L., Ceccarelli, M., & Parrinello, M., Assessing the accuracy of metadynamics. <em>J. Phys. Chem. B</em>, <strong>2015</strong>, 109(14), 6714-6721. <br>
+</div>
+</body>
+</html>
