@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seminar 10</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html"><h3 id="abstract">Seminar #10 – Kinetics – Rare envet Simulation</h3>
+<blockquote>
+<p>2024 Winter Molecular Simulation Seminar<br>
+Room 302, the 2nd experimental building at POSTECH<br>
+<strong>Presenter: Sangmin Lee</strong></p>
+</blockquote>
+<p> There are many ‘activated’ molecular processes such as phase transitions, self-assembly, conformational changes, association/dissocation, and chemical reactions, where the events are rarely happened on the molecular time scales. 
+In here, convential MD simulations cannot be used to study activated processes.
+The main reason is not that the relevant dynamics is slow, but rather that the energy barrier that separates two metastable basins are large compared to kT such that the energy fluctuations followed by equipartition theorem are unlikely to drive the system to the top of the barrier.
+Even though such rare events happen infrequently, when rare evnet does take place, it usually happens quite quickly, on a time scale that can be followed by MD simulation. 
+This wide disparity of timescales present serious computational challenges in conventional MD simulation to study the kinetics of various activated processes.
+The pioneering works in this field are the Bennett-Chandler method based on TST (Transition State Theory), but one should recognize that this method is limited in applicability because it presupposes knowledge of the transition state, which cannot be applied to the system with rough energy surfaces.
+Since the mid-90s, molecular simulation techniques for computing the rate and mechanistic details of rare events as well as the extraction of proper reaction coordinates have undergone an explosive development. 
+</p>
+<ul></ul>
+<p>In this talk, I'll discuss the theoretical framework of the molecular simulation methods that are aimed to study the kinetics of several rare events.
+One way is to harvest an ensemble of unbiased dynamical trajectories between the reactant and product states (transition ensemble) through performing a random walk (shooting move) in trajectory via a Metropolis Monte Carlo procedure.
+This is called “transition path sampling”(TPS), which is metaphorically akin to the throwing ropes over rough mountain passes in the dark.
+Throwing ropes in the sense that one shoots short trajectories attempting to reach one stable state from another, and in the dark because of the high-dimensionality of systems.
+Many modifications and improvents on TPS such as TPS+U, transition interface sampling (TIS), and replica exhange TIS (RETIS) will be also discussed in this talk.
+On the other way, there are other methods that do not resort on the shooting move for microscopic reversibility, but splitting the trajectories into multiple different trajectories using the stochastic nature of the dynamics.
+The example of such splitting methods are forward flux sampling (FFS), and milestoning which will be discussed in this talk.
+Comparing the forte and foible of Markove chain Monte carlo and splitting methods will be mentioned as well.
+</p>
+<h4 id="Reference">Reference</h4>
+[1] Senderowitz, H., Guarnieri, F., & Still, W. C. A smart Monte Carlo technique for free energy simulations of multiconformational molecules. Direct calculations of the conformational populations of organic molecules. <em>J. Am. Chem. Soc.</em>, <strong>1995</strong>, 117(31), 8211-8219.<br>
+[2] Lyubartsev, A. P., Martsinovski, A. A., Shevkunov, S. V., & Vorontsov‐Velyaminov, P. N. New approach to Monte Carlo calculation of the free energy: Method of expanded ensembles. <em>J. Chem. Phys.</em>, <strong>1992</strong>, 96(3), 1776-1783.<br>
+[3] Shi, W., & Maginn, E. J. Continuous fractional component Monte Carlo: An adaptive biasing method for open system atomistic simulations. <em>J. Chem. Theory. Comput.</em>, <strong>2007</strong>,3(4), 1451-1463.<br>
+[4] Rahbari, A., Hens, R., Ramdin, M., Moultos, O. A., Dubbeldam, D., & Vlugt, T. J. H. Recent advances in the continuous fractional component Monte Carlo methodology. <em>Mol. Sim.</em>, <strong>2021</strong>, 47(10-11), 804-823.<br>
+[5] Nilmeier, J. P., Crooks, G. E., Minh, D. D., & Chodera, J. D. Nonequilibrium candidate Monte Carlo is an efficient tool for equilibrium simulation. <em>PNAS</em>, <strong>2011</strong>, 108(45), E1009-E1018.<br>
+[6] Ross, G. A., Rustenburg, A. S., Grinaway, P. B., Fass, J., & Chodera, J. D. Biomolecular simulations under realistic macroscopic salt conditions. <em>J. Phys. Chem. B</em>, <strong>2018</strong>, 122(21), 5466-5486.<br>
+[7] Barhaghi, M. S., Crawford, B., Schwing, G., Hardy, D. J., Stone, J. E., Schwiebert, L., ... & Tajkhorshid, E. Py-MCMD: Python software for performing hybrid Monte Carlo/molecular dynamics simulations with GOMC and NAMD. <em>J. Chem. Theory. Comput.</em>, <strong>2022</strong>, 18(8), 4983-4994.<br>
+[8] Neyts, E. C., & Bogaerts, A. Combining molecular dynamics with Monte Carlo simulations: implementations and applications. <em>Theoretical Chemistry in Belgium: A Topical Collection from Theoretical Chemistry Accounts</em>, <strong>2014</strong>, 277-288.<br>
+</div>
+</body>
+
+</html>
