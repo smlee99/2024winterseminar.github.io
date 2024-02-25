@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width,initial-scale=1.0">
+ <title>Seminar 13</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css"/>
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html"><h3 id="abstract">Seminar #13 - Reactive Simulation - Polymerization</h3>
+<blockquote>
+<p>2024 Winter Molecular Simulation Seminar<br>
+Room 302, the 2nd experimental building at POSTECH<br>
+<strong>Presenter: Kyeong-jun Jeong</strong></p>
+</blockquote>
+
+<p>
+ Understanding the atomic and molecular processes accompanying bond scission and formation is essential in chemistry. In various domains such as combustion, heterogeneous catalysis, electro-metallization, biomolecule reactions, and polymer nanocomposites, the atomic details of chemical reactions are multiscale in time and space. In such processes, reactive molecular dynamics (RMD) simulations, which stand for the approaches of modeling the time evolution of the system with taking the changes in atom connectivity into account, are powerful tools for elucidating the detailed energetics and dynamics in atomic scales. The atomic energy landscape beyond the fixed predefined connectivity of classical MD simulations can be resolved by quantum mechanics (QM)-based MD simulations, empirical force fields along the bond breakage, or adjustments on the traditional MD simulation protocols to allowing adaptive change of bond connectivity [1-3]. The common philosophy of these approaches is bridging the gap between the abilities of the QM side and the classical MD side; the former is theoretically rigorous for modeling reactions but costly, and the latter is computationally efficient but not originally designed for bond-breaking processes. However, since the simulation methods significantly differ in their theoretical foundations and abilities, the choice and implementation require a deep understanding of the spatiotemporal scale and specific chemical properties of the systems and processes.
+ </p>
+<ul></ul>
+<p>
+  In this talk, I will particularly overview the reactive MD simulation methods that are effective to nanoscale reactive phenomena in soft condensed matter. The reactive force fields such as ReaxFF[1,4] and reactive empirical bond order(REBO) [5,6] schemes express bond order with respect to configurations, and they are a major stream of achievements to dynamically model the bond breaking and formation in molecular-mechanical frameworks. In other means, the quantum-mechanical potential energy surfaces of intermolecular atom migration can be incorporated to Hamiltonians, comprising the multistate empirical valence bond (MS-EVB) model[7] and the multiscale reactive molecular dynamics (MS-RMD) method[2,8].   Lastly, I will discuss other adjusted simulation methods for polymeric materials accompanying adaptive network formations and in-situ polymerizations[3,9,10].
+</p>
+
+<h4 id="References">References</h4>
+[1] Senftle, T. P., Hong, S., Islam, M. M., Kylasa, S. B., Zheng, Y., Shin, Y. K., <em>et al.</em>, The ReaxFF reactive force-field: development, applications and future directions. <em>npj Comput. Mater.</em>, <strong>2016</strong>, 2, 15011.<br>
+[2] Knight, Chris, Gerrick E. Lindberg, and Gregory A. Voth., Multiscale reactive molecular dynamics. <em>J. Chem. Phys.</em>, <strong>2012</strong>, 137, 22A525.<br>
+[3] Li, Chunyu, and Alejandro Strachan. Molecular scale simulations on thermoset polymers: A review.  <em>J. Polym. Sci. B: Polym. Phys.</em>, <strong>2015</strong>, 53(2), 103-122.<br>
+[4] Mao, Qian, Muye Feng, Xi Zhuo Jiang, Yihua Ren, Kai H. Luo, and Adri CT van Duin., Classical and reactive molecular dynamics: Principles and applications in combustion and energy systems. <em>Prog. Energy. Combust. Sci.</em>, <strong>2023</strong>, 97, 101084.<br>
+[5] Tersoff, J., New empirical approach for the structure and energy of covalent systems, <em>Phys. Rev. B</em>, <strong>1988</strong>, 37(12), 6991.<br>
+[6] Brenner, D.W., Shenderova, O.A., Harrison, J.A., Stuart, S.J., Ni, B. and Sinnott, S.B., A second-generation reactive empirical bond order (REBO) potential energy expression for hydrocarbons, <em>J. Phys. Condens. Matt.</em>, <strong>2002</strong>, 14(4), 783.<br>
+[7] Schmitt, U.W. and Voth, G.A., Multistate empirical valence bond model for proton transport in water. <em>J. Phys. Chem. B</em>, <strong>1998</strong>, 102(29), 5547-5551.<br>
+[8] Yamashita, T., Peng, Y., Knight, C. and Voth, G.A., Computationally efficient multiconfigurational reactive molecular dynamics., <em>J. Chem. Theory Comput.</em>, <strong>2012</strong>, 8(12), 4863-4875.<br>
+[9] Abbott, Lauren J., Kyle E. Hart, and Coray M. Colina. Polymatic: a generalized simulated polymerization algorithm for amorphous polymers., <em>Theor. Chem. Acc.</em>,  <strong>2013</strong>, 132, 1-19.<br>
+[10] Gissinger, Jacob R., Benjamin D. Jensen, and Kristopher E. Wise. Modeling chemical reactions in classical molecular dynamics simulations. <em>Polymer</em>, <strong>2017</strong>, 128, 211-217.<br>
+</div>
+</body>
+</html>
