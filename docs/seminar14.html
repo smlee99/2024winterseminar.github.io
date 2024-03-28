@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seminar 1</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html"><h3 id="abstract">Seminar #14 - Reactive Simulation - Proton Transport</h3>
+<blockquote>
+<p>2024 Winter Molecular Simulation Seminar<br>
+Room 302, the 2nd experimental building at POSTECH<br>
+<strong>Presenter: Sangmin Lee</strong></p>
+</blockquote>
+<p> Understanding the behavior of excess protons in aqueous solution (H3O+) is deeply involved with the integral part of energy conversion in biology and technology.
+  Especially, the transport properties of H3O+ turns out to be much more interesting with a diffusion coefficient that is roughly 1 order of magnitude larger than that of other small cations.[1]
+  While the latter undergo vehicular diffusion through Brownian motion, the driving force of fast proton transport in aqueous solution is originated from both Brownian motion and Grotthuss diffusion.
+  The Grotthuss mechanism allows excess protons in system to rapidly migrate through water by swapping covalent bonds for hydrogen bonds.
+  Although computational modeling of these Grotthuss events is expected to play an important role in uncovering many atomistic details, classical MD simulation based on conventional force field has its own inability to describe the bond breaking/formation process.
+  As such, a handful of MD studies only treat the H3O+ ions as Brownian particles without Grotthuss mechanism and without allowing for protonation/deprotonation events.
+  It should be emphasized that a number of different computational approaches were previously used to dynamically simulate proton transport based on first principle calculations.
+  However, the computational overhead of such approaches severly limited the spatiotemporal scale which can be accessible through simulation, covering time scales of 10-2ps simulation time.
+  This warrants the accurate and efficient simulation techniques that enable the description of Grotthuss mechanism in diverse range of chemical system with extended spatiotemporal scale.</p>
+<ul></ul>
+<p>In this talk, I'll discuss the history of the development of integrators in MD simulation community by focusing on the desirable properties that integrators should satisfy.
+  Such properties include the long time step, numerically stable, and accurate configuration/dynamics sampling through simulation.
+  To extend the time step used in integrators, I'll explain the constraint algorithm[1-3],  multistep integrator[4-5], and hydrogen mass repartitioning(HMR)[6].
+  To ensure the numerical stability of integrators, I'll explain the energy- drift [7] and resonance instabilities [8] issue and how such problems have been resolved through the improvement of integration algorithms.
+  To integrate in a reliable manner, I'll explain the dependence of integrators on configurational sampling [9] and dynamic properties [10] of intersted system.
+  Lastly, I'll briefly show the way several integrators are implemented in OpenMM, which should be interested to most of us.</p>
+<h4 id="Reference">Reference</h4>
+[1] Lide, D. R.CRC Handbook of Chemistry and Physics, 82nd ed.;CRC Press: Boca Raton, London, New York, Washington, 2001.<br>
+[2] Hess, B., Bekker, H., Berendsen, H. J., & Fraaije, J. G. LINCS: A linear constraint solver for molecular simulations. <em>J. Comp. Chem.</em>, <strong>1997</strong> 18(12), 1463-1472.<br>
+[3] Eastman, P., & Pande, V. S. Constant constraint matrix approximation: a robust, parallelizable constraint method for molecular simulations. <em>J. Chem. Theory. Comput.</em>, <strong>2010</strong>, 6(2), 434-437.<br>
+[4] Tuckerman, M. B. B. J. M., Berne, B. J., & Martyna, G. J. Reversible multiple time scale molecular dynamics. <em>J. Chem. Phys.</em>, <strong>1992</strong>, 97(3), 1990-2001.<br>
+[5] Lagardere, L., Aviat, F., & Piquemal, J. P. Pushing the limits of multiple-time-step strategies for polarizable point dipole molecular dynamics. <em>J. Phys. Chem. Lett.</em>, <strong>2019</strong>, 10(10), 2593-2599.<br>
+[6] Feenstra, K. A., Hess, B., & Berendsen, H. J. Improving efficiency of large time‐scale molecular dynamics simulations of hydrogen‐rich systems. <em>J. Comp. Chem.</em>, <strong>1999</strong>, 20(8), 786-798.<br>
+[7] Kitchen, D. B., Hirata, F., Westbrook, J. D., Levy, R., Kofke, D., & Yarmush, M. Conserving energy during molecular dynamics simulations of water, proteins, and proteins in water. <em>J. Comp. Chem.</em>, <strong>1990</strong>, 11(10), 1169-1180.<br>
+[8] Schlick, T., Mandziuk, M., Skeel, R. D., & Srinivas, K. Nonlinear resonance artifacts in molecular dynamics simulations. <em>J. Chem. Phys.</em>, <strong>1998</strong>, 140(1), 1-29.<br>
+[9] Fass, J., Sivak, D. A., Crooks, G. E., Beauchamp, K. A., Leimkuhler, B., & Chodera, J. D. Quantifying configuration-sampling error in Langevin simulations of complex molecular systems. <em>Entropy</em>, <strong>2018</strong>, 20(5), 318.<br>
+[10] Sivak, D. A., Chodera, J. D., & Crooks, G. E. Time step rescaling recovers continuous-time dynamical properties for discrete-time Langevin integration of nonequilibrium systems. <em>J. Phys. Chem. B</em>, <strong>2014</strong>, 118(24), 6466-6474.
+</div>
+</body>
+
+</html>
